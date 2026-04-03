@@ -1931,7 +1931,7 @@
           submitButton.textContent = 'Отправляем...';
         }
 
-        if (!WORKER_URL || WORKER_URL.includes('https://nameless-flower-79bb.tosha-yastrema.workers.dev/')) {
+        if (!WORKER_URL) {
           throw new Error('Не указан адрес Cloudflare Worker.');
         }
 
