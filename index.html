@@ -1508,9 +1508,7 @@
             меню и сделать этот день удобным для каждого гостя.
           </p>
 
-          <div class="form-note">
-            Ответ из формы отправляется через защищённый обработчик Google Apps Script в Telegram.
-          </div>
+          
 
           <form class="rsvp-form" id="rsvpForm" novalidate>
             <div class="field">
@@ -1606,8 +1604,7 @@
               <button class="button button-ghost" type="button" id="resetDraft">Очистить форму</button>
             </div>
 
-            <div class="status" id="formStatus" aria-live="polite">После заполнения ответ отправится в Telegram через Google Apps Script и сохранится локально как черновик на вашем устройстве.</div>
-          </form>
+          
 
           <iframe id="appsScriptSilentFrame" name="apps_script_silent_frame" title="Скрытая отправка RSVP" class="sr-only"></iframe>
           <form id="appsScriptBridgeForm" class="sr-only" method="POST" target="apps_script_silent_frame" action="">
@@ -1710,7 +1707,7 @@
   </div>
 
   <script>
-    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2wiBoCzHz8z7d-KNkf7XZdv0tVToKX_uixa6yIXgCQf0XE9CIdLTJyMydALX16auX/exec';
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlSdXvblCwX9R9pP4rjh1PaUoScmd0orWUadb9bbQ7yAOsVEy4oENWJji9e6sqeLzJ/exec';
 
     const STORAGE_KEYS = {
       cookies: 'wedding-invite-cookie-accepted',
