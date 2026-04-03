@@ -1512,7 +1512,7 @@
             Ответ из формы отправляется через защищённый Cloudflare Worker в Telegram.
           </div>
 
-          <form class="rsvp-form" id="rsvpForm" method="POST" action="https://REPLACE_WITH_YOUR_WORKER_URL.workers.dev" novalidate>
+          <form class="rsvp-form" id="rsvpForm" method="POST" action="https://nameless-flower-79bb.tosha-yastrema.workers.dev" novalidate>
             <div class="field">
               <label for="guestName">Ваше имя и фамилия</label>
               <input class="input" id="guestName" name="guestName" type="text" placeholder="Например: Мария Иванова" required>
@@ -1931,19 +1931,12 @@
           submitButton.textContent = 'Отправляем...';
         }
 
-        if (!WORKER_URL || WORKER_URL.includes('REPLACE_WITH_YOUR_WORKER_URL')) {
+        if (!WORKER_URL || WORKER_URL.includes('https://nameless-flower-79bb.tosha-yastrema.workers.dev/')) {
           throw new Error('Не указан адрес Cloudflare Worker.');
         }
 
         const formData = new FormData(form);
-        const response = await fetch(WORKER_URL, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          },
-          mode: 'cors'
-        });
+        
 
         let payload = null;
         try {
